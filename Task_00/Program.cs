@@ -25,5 +25,6 @@ int num = Convert.ToInt32(Console.ReadLine()); // Т.к. Console.ReadLine() им
 // ToInt32() - позволяет конвертировать любой тип данных, переводить из одной системы исчисления в другую.
 // int num = int.Parse(Console.ReadLine()); - второй способ конвертации типа данных int только в string. 
 int square = num * num;
-Console.WriteLine($"Квадрат числа {num} = {square}"); // $ - это интерполяция строк. Это позволяет вставлять переменные {}.
+Console.WriteLine($"Квадрат числа {num} = {square}"); 
+// $ - это интерполяция строк. Это позволяет вставлять переменные вот так: $ "{num}"
 
