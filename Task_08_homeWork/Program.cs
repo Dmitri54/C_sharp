@@ -6,14 +6,14 @@
 
 Console.WriteLine("Эта программа принимает на вход число (N), а на выходе показывает \nвсе чётнык числа от 1 до N.");
 Console.Write("Введите число и нажмите Enter: ");
-char simvol = ','; 
+// char simvol = ','; 
 int number = int.Parse(Console.ReadLine());
 for (int index = 1; index <= number; index++) if (index %2 == 0) 
 {
-    Console.Write(index);
+    Console.Write($"{index}, ");
     if (index == number) break;
-    Console.Write(simvol);
-    Console.Write(" ");
+    // Console.Write(simvol);
+    // Console.Write(" ");
     
 }
 
