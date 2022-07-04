@@ -17,5 +17,5 @@ if (firstNum*firstNum == secondtNum | secondtNum*secondtNum == firstNum) // | - 
 }
 else
 {
-    Console.Write("Одно число НЕ является квадратом другого.");
+    Console.Write("Ни одно из число НЕ является квадратом другого.");
 }
