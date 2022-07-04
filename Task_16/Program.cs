@@ -11,7 +11,7 @@ int firstNum = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число и нажмите Enter: ");
 int secondtNum = Convert.ToInt32(Console.ReadLine());
 
-if (firstNum*firstNum == secondtNum | secondtNum*secondtNum == firstNum) // | - логический оператор ИЛИ.
+if (firstNum*firstNum == secondtNum || secondtNum*secondtNum == firstNum) // || - логический оператор ИЛИ.
 {
     Console.Write("Одно число является квадратом другого.");
 }
