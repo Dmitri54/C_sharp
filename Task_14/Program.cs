@@ -8,7 +8,7 @@ Console.WriteLine("Эта программа принимает на вход ч
 Console.Write("Введите число и нажмите Enter: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if (num % 7 == 0 && num % 23 == 0)
+if (num % 7 == 0 && num % 23 == 0) // && - это логическая И.
 {
     Console.Write($"{num} кратно и 7 и 23");
 }
