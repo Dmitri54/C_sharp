@@ -7,7 +7,7 @@ Console.WriteLine("Программа принимает на вход одно 
 Console.Write("Введите число и нажмите Enter: ");
 
 int number = Convert.ToInt32(Console.ReadLine());
-for (int index = -number; index <= number; index++)
+for ( int index = -number; index <= number; index++)
 {
     Console.Write($"{index} ");
 }
