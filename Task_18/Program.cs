@@ -6,9 +6,9 @@ Console.WriteLine("Программа запрашивает номер коор
 Console.Write("Введите четверть: ");
 int quarter = Convert.ToInt32(Console.ReadLine());
 
-string Coord (int q)
+string Coord (int q) // Объявляю метод, который возвращает строку, передоваемый параметр значения введеный в терминал.
 {
-    switch (q)
+    switch (q) // перебор вариантов переменной.
     {
         case 1: 
             return "Диапазон возможных координат: X > 0 и Y > 0";
