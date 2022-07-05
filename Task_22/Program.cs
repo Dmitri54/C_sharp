@@ -5,12 +5,12 @@
 
 Console.WriteLine("Введите число для вычисления набора квадратов: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int square = 0;
+int square = 0; // Создам две переменные, которые буду использовать в вычислениях.
 int count = 1;
-while (count <= num)
+while (count <= num) // Цикл
 {
-    square = count*count;
-    Console.WriteLine($"{count} -> {square} ");
+    square = count*count; // Вычисляю квадрат счетчика.
+    Console.WriteLine($"{count, 3} -> {square, 3} "); // Вывожу в терминал. {square, 3} - отступ.
     count++;
 }
 
