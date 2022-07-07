@@ -17,5 +17,3 @@ while (count <= num )
     count++;
 }
 
-
-
