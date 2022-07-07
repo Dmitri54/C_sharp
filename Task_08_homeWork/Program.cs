@@ -8,7 +8,8 @@ Console.WriteLine("Эта программа принимает на вход ч
 Console.Write("Введите число и нажмите Enter: ");
 // char simvol = ','; 
 int number = int.Parse(Console.ReadLine());
-for (int index = 1; index <= number; index++) if (index %2 == 0) 
+for (int index = 1; index <= number; index++) 
+if (index %2 == 0) 
 {
     Console.Write($"{index}, ");
     if (index == number) break;
