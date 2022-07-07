@@ -16,4 +16,3 @@ while (count <= num )
     Console.WriteLine($"{count, 3} -> {cube, 3} ");
     count++;
 }
-
