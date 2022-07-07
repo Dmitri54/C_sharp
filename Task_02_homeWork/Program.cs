@@ -17,16 +17,12 @@ int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число и нажмите Enter: ");
 int b = Convert.ToInt32(Console.ReadLine());
 
-int max = a;
-int min = b;
-if (a > min)
+if (a > b)
 {
-    Console.WriteLine($"Первое число больше второго: {a} > {b}.\nmax = {max}.\nmin = {min}.");
+    Console.WriteLine($"Первое число больше второго: {a} > {b}.\nmax = {a}.\nmin = {b}.");
 }
 else
 {
-    Console.WriteLine($"Первое число меньше второго: {a} < {b}.\nmax = {min}.\nmin = {max}.");
+    Console.WriteLine($"Первое число меньше второго: {a} < {b}.\nmax = {b}.\nmin = {a}.");
 }
-
-
 
