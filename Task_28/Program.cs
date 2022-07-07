@@ -2,22 +2,37 @@
  и выдаёт произведение чисел от 1 до N.
 4 -> 24
 5 -> 120 */
-
+// -----------------------------------------------------------------------------
 Console.WriteLine("Программа выдает произведение чисел от 1 до N.");
 Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+int numberN = Convert.ToInt32(Console.ReadLine());
+// Первый вариант --------------------------------------------------------------
 
-int Count (int number)
-{
-    int x = 1;
-    for (int i = 1; i <= number; i++)
-    {
-        x = i * x;
-    }    
-    return x; 
+// int Count (int num)
+// {
+//     int x = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         x = i * x;
+//     }    
+//     return x; 
     
+// }
+
+// int result = Count(numberN);
+// Console.Write(result);
+
+// ----------------------------------------------------------------------------
+// Второй вариант.
+
+int Mult(int num)
+{
+    int mult = 1; // Создам переменную равную т.к., от 1 до N.
+    for (int i = 1; i <= num; i++) // i - будет счетчиком, = 1, т.к. на ноль умножать нельзя.
+    {
+        mult *= i;
+    }
+    return mult;
 }
-
-int result = Count(num);
-Console.Write(result);
-
+int result = Mult(numberN);
+Console.WriteLine($"Произведение чисел от 1 до {numberN} = {result}");
