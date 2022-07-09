@@ -19,5 +19,5 @@ int SumNumbers(int num)
     return remainder;
 }
 int result = SumNumbers(number);
-Console.WriteLine($"Сумма чисел числа {number} -> {result}");
+Console.WriteLine($"Сумма цифр числа {number} -> {result}");
 
