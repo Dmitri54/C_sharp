@@ -24,7 +24,7 @@ void PrintArray(int[] array) // Этот метод напечатает мас�
     }
 }
 
-bool SearchElem (int[] array, int elem)
+bool SearchElem (int[] array, int elem) // Метод - ищет в массиве заданный элемент.
 {
     for (int i = 0; i < array.Length; i++)
     {
