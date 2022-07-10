@@ -4,7 +4,7 @@
 [-4, -8, 8, 2] -> [4, 8, -8, -2] */
 // -------------------------------------------------
 
-int[] GreateArrayRndInt(int size, int begin, int end) // Первый метод, создает и заполняет массив элементами.
+int[] GreateArrayRndInt(int size, int begin, int end) // Метод - создает и заполняет массив элементами.
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -15,19 +15,20 @@ int[] GreateArrayRndInt(int size, int begin, int end) // Первый метод
     return array;
 }
 
-void PrintArray(int[] array) // Этот метод напечатает массив в консоль как в примере.
+void PrintArray(int[] array) // Метод - напечатает массив в консоль.
 {
+    Console.WriteLine($"Сгенерированный массив из {array.Length} элементов:");
     for (int i = 0; i < array.Length; i++)
     {
         if (i == 0) Console.Write("[");
-        if (i < array.Length - 1) Console.Write(array[i] + ",");
-        else Console.Write(array[i] + "]");
+        if (i < array.Length - 1) Console.Write($"{array[i]},");
+        else Console.WriteLine($"{array[i]}]");
     }
 }
 
-int[] SwapElep (int[] array) // Метод. Умножит каждый элеммент массива на -1, чтобы опменять знак.
+int[] SwapElep (int[] array) // Метод - умножит каждый элемент массива на -1, чтобы поменять знак.
 {
-    int[] resArr = new int[array.Length];
+    int[] resArr = new int[array.Length]; //Создам новый массив, чтобы перезаписать массив новыми значениями.
     for (int i = 0; i < array.Length; i++)
     {
         resArr[i] = array[i] * -1;
