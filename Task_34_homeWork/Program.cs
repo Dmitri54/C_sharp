@@ -46,7 +46,7 @@ Console.Write("Введите размер массива: ");
 int insize = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите минимальное положительное трёхзначное число диапазона от 100: ");
 int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальное положительное трёхзначное число диапазона до 1000: ");
+Console.Write("Введите максимальное положительное трёхзначное число диапазона до 999: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
 int[] genarr = GreateArrayRndInt(insize, min, max);
