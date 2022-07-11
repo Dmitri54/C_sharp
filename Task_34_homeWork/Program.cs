@@ -41,7 +41,7 @@ void PrintRes(int res) // Метод - напечатает ответ.
     Console.Write($"{res}");
 }
 
-Console.WriteLine("Эта программа количество чётных чисел в массиве.");
+Console.WriteLine("Эта программа покажет количество чётных чисел в массиве.");
 Console.Write("Введите размер массива: ");
 int insize = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите минимальное положительное трёхзначное число диапазона от 100: ");
