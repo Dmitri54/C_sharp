@@ -2,9 +2,9 @@
 Напишу программу, которая покажет количество чётных чисел в массиве.
 Пример ответа:
 [345, 897, 568, 234] -> 2 */
+// ---------------------------------------------------------------------------------
 
-
-int[] GreateArrayRndInt(int size, int begin, int end)
+int[] GreateArrayRndInt(int size, int begin, int end) // Метод - создаст массив.
 {
     int[] array = new int[size];
     Random rnd = new Random();
