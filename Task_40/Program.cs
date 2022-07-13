@@ -5,23 +5,9 @@
 меньше суммы двух других сторон. */
 // -----------------------------------------------------------------------------------------------------
 
-Console.Write("Введите первую сторону треугольника A: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите первую сторону треугольника B: ");
-int b = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите первую сторону треугольника C: ");
-int c = Convert.ToInt32(Console.ReadLine());
-
-bool able = CheakAbilityTriacl(a, b, c); // able - признак возможности существования треугольника.
-string answer = ShowAnswer(able);
-Console.WriteLine(answer);
-
-bool CheakAbilityTriacl(int a, int b, int c) // Метод - сравнит стороны треугольника.
-// Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
+bool YesOrNotTrial(int a, int b, int c)
 {
-    bool able;
-    int maxSize;
-    if (a < (b + c) && b < (a + c) && c < (a + b))
+    if (a <b + c && b < a + c && c < a + b)
     {
         return true;
     }
@@ -31,9 +17,9 @@ bool CheakAbilityTriacl(int a, int b, int c) // Метод - сравнит ст
     }
 }
 
-string ShowAnswer(bool ability) // Метод - выведет ответ в консоль.
+string ShowAnswer(bool a)
 {
-    if (ability)
+    if (a)
     {
         return "Треугольник возможен";
     }
@@ -42,3 +28,15 @@ string ShowAnswer(bool ability) // Метод - выведет ответ в к�
         return "Треугольник НЕ возможен";
     }
 }
+
+Console.WriteLine("Программа проверяет, может ли существовать треугольник с сторонами такой длины.");
+Console.Write("Введите первое число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите третье число: ");
+int c = Convert.ToInt32(Console.ReadLine());
+
+bool able = YesOrNotTrial(a, b, c);
+string answer = ShowAnswer(able);
+Console.WriteLine(answer);
