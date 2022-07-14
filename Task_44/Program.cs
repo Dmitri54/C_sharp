@@ -4,25 +4,23 @@
 Если N = 3 -> 0 1 1
 Если N = 7 -> 0 1 1 2 3 5 8 */
 // ---------------------------------------------------------------------------------------
-Console.Write("Укажите количество чисел Фибоначчи для вывода: ");
+Console.Write("Введите число Фибоначчи: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
-// f(n) = f(n-2) + f(n-1)
 int first = 0;
 int second = 1;
-int counter = 0;
+int fibo = 0;
 
-if (N = 1) Console.Write("0");
-if (N = 2) Console.Write("1");
-else
+Console.Write($"{first} ");
+Console.Write($"{second} ");
+
+for (int i = 2; i < N; i++)
 {
-    int temp1 = 0;
-    int temp2 = 1;
-    int result = 0;
-    while (counter < N)
-    {
-        result = temp1 = temp2;
-        Console.Write();
-    }
+    fibo = first + second;
+    Console.Write($"{fibo} ");
+    first = second;
+    second = fibo;
 }
+
+
 
