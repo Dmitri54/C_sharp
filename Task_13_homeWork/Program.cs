@@ -7,26 +7,15 @@
 
 Console.WriteLine("Эта программа выводит третью цифру заданного числа или сообщает, что третьей цифры нет.");
 Console.Write("Введите число и нажмите Enter: ");
-int numBer = Convert.ToInt32(Console.ReadLine());
-int n = numBer.Length;
+int number = Convert.ToInt32(Console.ReadLine());
 
-int Method(int numBer, int n)
+if (number >= 100)
 {
-    index = 0;
-    if (int n[index] > 3) Console.WriteLine($"Третья цифра числа {numBer} => {n[index]}");
-    return;
-
+    int thirdNumber = number / 100 % 10;
+    Console.WriteLine($"В числе: {number} -> {thirdNumber} третья цифра");
 }
-
-
-// Console.WriteLine($"Третья цифра числа {numBer} => {n[index]}");
-// if(index < n)
-// {
-//     int thridNum = numBer / 100;
-
-//     Console.WriteLine(index); // - покажет на экране соответствующее значение индекса.
-//     break; // - это оператор, который прервет выполнение после первого совпадения array[index] == find.
-
-// }
-
+else
+{
+    Console.WriteLine($"В числе: {number} -> третьей цифры нет");
+}
 
