@@ -31,7 +31,7 @@ void PrintRes(int res) // Метод - напечатает ответ.
     Console.Write($"{res}");
 }
 
-int DifferMinAndMaxPos(int[] array) // Метод - находит разницу между первым и последний элемент массива.
+int DifferMinAndMaxPos(int[] array) // Метод - находит разницу между max и min элементом массива.
 {
     int res = 0;
     for (int i = 0; i < array.Length; i++)
