@@ -4,7 +4,9 @@
 [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2 */
 // ---------------------------------------------------------------------------------------
 
-int[] GreateArrayRndInt(int size, int begin, int end) // Метод - создает и заполняет массив вещественных чисел.
+// До делаю.
+// Нужен массив вещественных чисел.
+int[] GreateArrayRndInt(int size, int begin, int end) // Метод - создает и заполняет массив НЕ вещественных чисел.
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -26,21 +28,29 @@ void PrintArray(int[] array) // Метод - напечатает массив �
     }
 }
 
-void PrintRes(int res) // Метод - напечатает ответ.
+void PrintAnswer(int answer) // Метод - напечатает ответ.
 {
-    Console.Write($"{res}");
+    Console.Write($"{answer}");
 }
 
-int DifferMinAndMaxPos(int[] array) // Метод - находит разницу между max и min элементом массива.
+int DifferMinAndMaxNum(int[] array) // Метод - находит разницу между max и min элементом массива.
 {
-    int res = 0;
+    int min = array[0];
+    int max = array[0];
+    int deff = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        res = array[0] - (array[array.Length - 1]);
+        if (array[i] < min)
+        {
+            min = array[i];
+        }
+        else if (array[i] > max)
+        {
+            max = array[i];
+        }
     }
-    return res;
+    return deff = max - (min);
 }
-
 
 Console.Write("Введите размер массива: ");
 int insize = Convert.ToInt32(Console.ReadLine());
@@ -50,7 +60,8 @@ Console.Write("Введите максимальное число диапазо
 int max = Convert.ToInt32(Console.ReadLine());
 
 int[] genarr = GreateArrayRndInt(insize, min, max);
-int result = DifferMinAndMaxPos(genarr);
-
+// double[] genarr = {3.5, 7.1, 22.9, 2.3, 78.5};
 PrintArray(genarr);
-PrintRes(result);
+
+int diffenence = DifferMinAndMaxNum(genarr);
+PrintAnswer(diffenence);
