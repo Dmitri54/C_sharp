@@ -26,7 +26,7 @@ void PrintArray(int[] array)
     }
 }
 
-int CountPosNum (int[] array) // Метод - считает в массиве, количество положительных элементов.
+int CountPosNum (int[] array) // Метод - считает в массиве, количество чётных элементов.
 {
     int count = 0; 
     for (int i = 0; i < array.Length; i++)
