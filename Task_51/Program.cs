@@ -36,10 +36,12 @@ void PrintMatrix(int[,] array) // Этот метод напечатает дв�
 int SumMainDiag(int[,] array) // Метод найдет сумму элементов, находящихся на главной диагонали с индексами (0,0); (1;1) и т.д.
 {
     int sunElMainDiag = 0;
-    for (int i = 0; i < array.GetLength(0); i ++)
+    int index = array.GetLength(0) > array.GetLength(1) ? 1 : 0; //Чтобы не было ошибки, когда строк больше чем столбцов.
+    
+    for (int i = 0; i < array.GetLength(index); i ++)
     {
         sunElMainDiag += array[i, i];
-
+        
     }
     return sunElMainDiag;
 }
@@ -59,6 +61,4 @@ PrintMatrix(genArray);
 
 int resultSum = SumMainDiag(genArray);
 Console.WriteLine($"Сумма элементов, находящихся на главной диагонали равна {resultSum}");
-
-
 
