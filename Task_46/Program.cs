@@ -34,7 +34,7 @@ int[,] GreateMatrixRndInt(int row, int col, int min, int max) // Метод, с�
     return array;
 }
 
-void PrintMatrixy(int[,] array) // Этот метод напечатает двумерный массив в консоль.
+void PrintMatrix(int[,] array) // Этот метод напечатает двумерный массив в консоль.
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -50,6 +50,6 @@ void PrintMatrixy(int[,] array) // Этот метод напечатает дв
 }
 
 int[,] arrayResult = GreateMatrixRndInt(3, 4, 10, 30);
-PrintMatrixy(arrayResult);
+PrintMatrix(arrayResult);
 
 
