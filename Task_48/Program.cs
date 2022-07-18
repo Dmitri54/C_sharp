@@ -16,7 +16,7 @@ int[,] GreateMatrixNotRndInt(int row, int col) //Метод, создает и �
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = i + j; // Тут складываю.
+            array[i, j] = i + j; // Тут складываю строку и столбец.
         }
 
     }
