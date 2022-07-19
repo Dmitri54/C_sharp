@@ -3,13 +3,14 @@
 
 [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2 */
 // ---------------------------------------------------------------------------------------
-double[] GreateArrayRndInt(int size, double begin, double end) // Метод - создает и заполняет массив вещественных чисел.
+double[] GreateArrayRndInt(int size, int begin, int end) // Метод - создает и заполняет массив вещественных чисел.
 {
     double[] array = new double[size];
     Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.NextDouble() * (begin - end) + end;
+        array[i] = Convert.ToDouble(rnd.Next(begin, end + 1) / 10.0); 
+        //rnd.NextDouble() * (begin - end) + end;
     }
     return array;
 }
