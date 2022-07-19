@@ -10,7 +10,7 @@ double[] GreateArrayRndInt(int size, int begin, int end) // Метод - соз�
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Convert.ToDouble(rnd.Next(begin, end + 1) / 10.0); 
-        //rnd.NextDouble() * (begin - end) + end;
+        // rnd.NextDouble() * (end - begin) + begin;
     }
     return array;
 }
