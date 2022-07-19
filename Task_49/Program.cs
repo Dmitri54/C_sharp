@@ -50,7 +50,7 @@ int[,] SqrParity(int[,] array) // Метод - найдет элементы, у
 
 Console.Write("Введите количетво строк: ");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количетво строк: ");
+Console.Write("Введите количетво столбцов: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите минимальное число диапазона: ");
