@@ -38,40 +38,35 @@ void PrintMatrix(int[,] array) // Этот метод напечатает дв�
     }
 }
 
-void SearchElem (int[,] array, int elem) // Метод - ищет в массиве позицию заданного элемента.
+
+void FindElPos(int[,] array, int posRow, int posCol)
 {
-    for (int i = 0; i < array.Length; i++)
+    if (posRow < array.GetLength(0) && posCol < array.GetLength(1))
     {
-        if (array[i] == elem) return true;
+        Console.WriteLine($"На позиции строка № {posRow}, столбец № {posCol} " +
+                          $"находится элемент со значением: {array[posRow - 1, posCol - 1]}");
     }
-    return false;
+    else Console.WriteLine($"Cтрока № {posRow}, столбец № {posCol} - такой позиции в массиве нет.");
 }
 
-
-void PrintRes(bool resSearch)
-{
-    string res = resSearch ? " -> ДА. Искомый элемент присутствует в массиве" : " -> НЕТ. Искомый элемент отсутствует в массиве";
-    Console.WriteLine(res);
-}
 
 Console.Write("Введите количетво строк: ");
-int m = Convert.ToInt32(Console.ReadLine());
+int row = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количетво столбцов: ");
-int n = Convert.ToInt32(Console.ReadLine());
+int col = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите минимальное число диапазона: ");
 int minDiap = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное число диапазона: ");
 int maxDiap = Convert.ToInt32(Console.ReadLine());
 
-int[,] arrayResult = GreateMatrixRndInt(m, n, minDiap, maxDiap);
+int[,] arrayResult = GreateMatrixRndInt(row, col, minDiap, maxDiap);
 PrintMatrix(arrayResult);
 
 Console.WriteLine("Эта программа проверяет присутствует ли заданный вами элемент в массиве.");
 Console.Write("Введите номер строки элемента для поиска: ");
-int mSerche = Convert.ToInt32(Console.ReadLine());
+int rowFind = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите номер столбца элемента для поиска: ");
-int nSerche = Convert.ToInt32(Console.ReadLine());
+int colFind = Convert.ToInt32(Console.ReadLine());
 
-bool resultSearch = SearchElemMatrix(arrayResult, mSerche, nSerche);
-PrintRes(resultSearch);
+FindElPos(arrayResult, rowFind, colFind);
