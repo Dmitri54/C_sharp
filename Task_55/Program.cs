@@ -74,3 +74,7 @@ if (col == row)
     int[,] arrayResult = ChangeRowAndCol(array);
     PrintMatrix(arrayResult);
 }
+else 
+{
+    Console.WriteLine($"Не возможно изменить строки на столбцы, замените размер матрицы.");
+}
