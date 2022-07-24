@@ -15,8 +15,8 @@ double[,] GreateMatrixRndInt(int row, int col, int min, int max) // Метод, 
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = Convert.ToDouble(rnd.Next(min, max + 1) / 10.0);
-            // rnd.NextDouble() * (max - min) + min;
+            array[i, j] = rnd.NextDouble() * (max - min) + min;
+            
         }
 
     }
@@ -30,10 +30,11 @@ void PrintMatrix(double[,] array) // Этот метод напечатает д
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-
+            double roundinNum = Math.Round(array[i, j], 2); // Наконец-то получилось!!!
+            //Math.Round(array[i, j], 2); - округляет значение до двух знаков после запятой.
             if (j == 0) Console.Write("[");
-            if (j < array.GetLength(1) - 1) Console.Write($"{array[i, j],4}, ");
-            else Console.Write($"{array[i, j],4}]");
+            if (j < array.GetLength(1) - 1) Console.Write($"{roundinNum,4}, ");
+            else Console.Write($"{roundinNum,4}]");
         }
         Console.WriteLine();
     }
