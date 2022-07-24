@@ -52,3 +52,5 @@ int maxDiap = Convert.ToInt32(Console.ReadLine());
 
 double[,] arrayResult = GreateMatrixRndInt(m, n, minDiap, maxDiap);
 PrintMatrix(arrayResult);
+
+// Все работает.
