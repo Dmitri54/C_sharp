@@ -48,9 +48,9 @@ int SumLineElements(int[,] array, int i)
     return sumLine;
 }
 
-Console.Write("Введите количетво строк: ");
+Console.Write("Введите количество строк: ");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количетво столбцов: ");
+Console.Write("Введите количество столбцов: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите диапазона: от 1 до ");
