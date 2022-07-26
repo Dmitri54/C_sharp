@@ -8,7 +8,7 @@
 int[] ConvertToBool(int a)
 {
     int b = a % 512;
-    int[] boolean = new int[9];
+    int[] boolean = new int[3];
     int razr = 256;
 
     for (int i = 0; i < boolean.Length; i++)
