@@ -20,7 +20,7 @@ int NaturalNumberSum(int num, int sum)
     else return NaturalNumberSum(num / 10, sum);
 }
 
-// Второй вариант, преподователя.
+// Второй вариант, преподователя. Решение в одну строку.
 int NaturalNumberSumVar2(int num)
 {
     if (num > 0) return num % 10 + NaturalNumberSumVar2(num / 10);
