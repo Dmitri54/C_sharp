@@ -7,11 +7,12 @@
 Console.Clear();
 Console.Write("Задайте число: ");
 int num = int.Parse(Console.ReadLine());
+
 int sum = NaturalNumberSum(num, 0);
-Console.WriteLine(sum);
+System.Console.WriteLine(sum);
 
 int sum2 = NaturalNumberSumVar2(num);
-Console.WriteLine(sum2);
+System.Console.WriteLine(sum2);
 
 int NaturalNumberSum(int num, int sum)
 {
@@ -26,5 +27,4 @@ int NaturalNumberSumVar2(int num)
     if (num > 0) return num % 10 + NaturalNumberSumVar2(num / 10);
     return 0;
 }
-
 
